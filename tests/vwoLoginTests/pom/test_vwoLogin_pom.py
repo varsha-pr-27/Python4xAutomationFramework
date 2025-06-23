@@ -18,7 +18,7 @@ class TestLogin:
         driver = setup
         login = LoginPage(driver)
         driver.get(self.base_url)
-        login.login_to_vwo_page(usr="admin", pwd="admin")
+        login.login_to_vwo_page(usr=self.username, pwd="123")
         time.sleep(5)
         error_message = login.get_error_message_text()
         assert error_message == "Your email, password, IP address or location did not match"
