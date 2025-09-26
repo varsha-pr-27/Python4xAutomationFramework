@@ -3,15 +3,18 @@
 # Webdriver - Init
 # Custom Functions
 # No Assertion here ( They are not Test cases)
-# Page Class
 
 from seleniumpagefactory.Pagefactory import PageFactory
 
 
 class LoginPage(PageFactory):
-    # Webdriver - Init
+
     def __init__(self, driver):
+        super().__init__()
         self.driver = driver
+        self.highlight = True
+
+    # Page Locators
 
     locators = {
         'username': ('CSS', "#login-username"),
@@ -28,17 +31,3 @@ class LoginPage(PageFactory):
     def error_msg(self):
         return self.error_message.get_text()
 
-# https://selenium-page-factory.readthedocs.io/en/latest/
-# Extended WebElements Methods
-# set_text	get_text
-# clear_text	click_button
-# double_click	get_list_item_count
-# select_element_by_text	select_element_by_index
-# select_element_by_value	get_all_list_item
-# get_list_selected_item	highlight
-# is_Enabled	is_Checked
-# getAttribute	hover
-# visibility_of_element_located	invisibility_of_element_located
-# element_to_be_clickable	execute_script
-# context_click	text_to_be_present_in_element
-# click_and_hold	release

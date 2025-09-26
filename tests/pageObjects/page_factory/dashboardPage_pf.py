@@ -1,11 +1,12 @@
 from seleniumpagefactory.Pagefactory import PageFactory
-from tests.utils.commom_utils import webdriver_wait_url
+
+from tests.utils.common_utils import webdriver_wait_url
 
 
-class DashboardPage(PageFactory):  #  1.Single Inheritance
+class DashboardPage(PageFactory):  # Single Inheritance
 
-    # Webdriver - Init
     def __init__(self, driver):
+        super().__init__()
         self.driver = driver
         self.highlight = True
 

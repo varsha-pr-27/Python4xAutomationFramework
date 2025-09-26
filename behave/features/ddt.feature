@@ -8,4 +8,4 @@ Feature: Showing off behave with Scenario Outline
       | greeting | response        |
       | Hello    | Hi there!       |
       | Goodbye  | See you later!  |
-      | Thanks   | You're  welcome! |
+      | Thanks   | You're  welcome!|
